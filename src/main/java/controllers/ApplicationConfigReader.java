@@ -30,9 +30,6 @@ public class ApplicationConfigReader
 	@Property(value="ImplicitlyWait")
 	private int ImplicitlyWait;
 	
-	@Property(value="VideoFeature")
-	private String VideoFeature;
-
 	public String getBrowser() {
 		return Browser;
 	}
@@ -49,7 +46,4 @@ public class ApplicationConfigReader
 		return ImplicitlyWait;
 	}
 
-	public String getVideoFeature() {
-		return VideoFeature;
-	}
 }

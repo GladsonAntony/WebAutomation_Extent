@@ -25,7 +25,6 @@ public class GMailPageObjects extends PageFactoryInitializer
 	
 	public GMailPageObjects enterEmailID(String emailID) 
 	{
-		utils.FluentWaiting.waitUntillElementToBeClickable(30, 500, emailIDTextBox);
 		emailIDTextBox.sendKeys(emailID);	
 		nextButton.click();
 		return this;

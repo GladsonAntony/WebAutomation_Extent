@@ -20,6 +20,7 @@ This is a Selenium Hybrid Framework.
 
 ### Headerless Support
  - HTMLUnit 
+ - Chrome Headless
 
 ### Platform Support
  - Windows

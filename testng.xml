@@ -2,13 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="listeners.ExtentTestNGIReporterListener"></listener>
-		<listener class-name="com.automation.remarks.testng.VideoListener"></listener>
+		<listener
+			class-name="listeners.ExtentTestNGIReporterListener" />
+		<listener
+			class-name="com.automation.remarks.testng.VideoListener" />
 	</listeners>
-
-	<test name="Test">
+	<test thread-count="1" name="Test">
 		<classes>
 			<class name="tests.Test1" />
+			<class name="tests.TestProperties" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

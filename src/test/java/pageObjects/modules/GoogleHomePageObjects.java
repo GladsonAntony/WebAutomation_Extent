@@ -5,9 +5,9 @@ package pageObjects.modules;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
-import utils.FluentWaiting;
 import utils.RandomGenerator;
 
 /**
@@ -25,8 +25,7 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 
 	
 	public GoogleHomePageObjects clickonGmailLink() throws Exception
-	{
-		FluentWaiting.waitUntillElementToBeClickable(5, 500, GmailLink);
+	{		
 		click(GmailLink);
 		return this;		
 	}
@@ -41,7 +40,7 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 	
 	public GoogleHomePageObjects verifyPageTitle() throws Exception 
 	{
-		FluentWaiting.waitForTitleToBe(5, 500, "Google");
+		Assert.assertEquals(getWebDriver().getTitle(), "Boogle");
 		return this;
 	}
 

@@ -15,7 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import controllers.BaseMethod;
 
-public class ExplicitWaiting extends BaseMethod {
+public class ExplicitWaiting extends BaseMethod
+{
 	public static WebDriver driver;
 	
 	/*Select using WebElements*/

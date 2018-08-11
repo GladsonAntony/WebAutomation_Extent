@@ -7,7 +7,7 @@ import utils.DateAndTime;
 public class TestProperties 
 {
 	@Test
-	public void test123() throws Exception
+	public void testPropertiesFile() throws Exception
 	{
 		System.out.println(DateAndTime.getDate());
 		System.out.println(DateAndTime.getTime());
