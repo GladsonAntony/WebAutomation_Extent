@@ -1,8 +1,7 @@
 
+
 <!DOCTYPE html>
 <html>
-
-
 <head>
 	<meta charset='utf-8' /> 
 	<meta name='description' content='' />
@@ -12,252 +11,221 @@
 	
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
-		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
 	
 	<title>Extent Report_Gladson Antony</title>
 
 	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
 	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
 </head>
-
 	<body class='extent standard default hide-overflow '>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
-
 <nav>
 	<div class="nav-wrapper">
-		<a href="#!" class="brand-logo blue darken-3">Extent</a>
-
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
-
 		<!-- report name -->
 		<span class='report-name'>Extent Report_Gladson Antony</span>
-		
 		<!-- report headline -->
 		<span class='report-headline'></span>
-
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
-			<li>
-                <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 11, 2018 11:42:04 AM</span>
-				</a>
-			</li>
-			<li>
-                <a href='#!'>
-                    <span class='label blue darken-3'>3.1.5</span>
-				</a>
-			</li>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>May 25, 2019 06:36:17 PM</span>
+			</a>
 		</ul>
 	</div>
-</nav>
-
-		<!-- container -->
+</nav>		<!-- container -->
 		<div class='container'>
-
 <div id='test-view' class='view'>
-				
 	<section id='controls'>
 		<div class='controls grey lighten-4'>
 			<!-- test toggle -->
 			<div class='chip transparent'>
 				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
-					<i class='material-icons'>warning</i> Status
+				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
 			</div>
 			<!-- test toggle -->
-
 			<!-- category toggle -->
 			<!-- category toggle -->
-
 			<!-- clear filters -->
 			<div class='chip transparent hide'>
 				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
-					<i class='material-icons'>close</i> Clear
+				<i class='material-icons'>close</i> Clear
 				</a>
 			</div>
 			<!-- clear filters -->
-
 			<!-- enable dashboard -->
 			<div id='toggle-test-view-charts' class='chip transparent'>
 				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
-					<i class='material-icons'>track_changes</i> Dashboard
+				<i class='material-icons'>track_changes</i> Dashboard
 				</a>
 			</div>
 			<!-- enable dashboard -->
-
 			<!-- search -->
 			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
 				<a href="#" class='search-div'>
-					<i class='material-icons'>search</i> Search
+				<i class='material-icons'>search</i> Search
 				</a>
-
 				<div class='input-field left hide'>
 					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
 				</div>
-				
 			</div>
 			<!-- search -->
 		</div>
 	</section>
-
-
-	<div class='subview-left left'>
-		
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
 		<div class='view-summary'>
-			<h5>Tests</h5>
 			<ul id='test-collection' class='test-collection'>
-				
-				
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>testGoogle</span>
-						<span class='test-time'>Aug 11, 2018 11:42:04 AM</span>
+						<span class='test-time'>May 25, 2019 06:36:17 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 11, 2018 11:42:04 AM</span>
-	<span class='label end-time'>Aug 11, 2018 11:42:04 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+331ms</span>
+	<span class='label start-time'>May 25, 2019 06:36:17 PM</span>
+	<span class='label end-time'>May 25, 2019 06:36:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+567ms</span>
 </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:42:09 AM</td>
-					<td class='step-details'>expected [Boogle] but found [Google]</td>
-				</tr>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>11:42:09 AM</td>
-					<td class='step-details'>tests.Test1.testGoogle<img data-featherlight='F:\Java\Eclipse Workspace\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png' width='10%' src='F:\Java\Eclipse Workspace\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png' data-src='F:\Java\Eclipse Workspace\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png'></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='F:\Java\Eclipse Workspace\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png' width='10%' src='F:\Java\Eclipse Workspace\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png' data-src='F:\Java\Eclipse Workspace\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png'></li>
-							</ul>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:36:24 PM</td>
+				<td class='step-details'>
+						expected [Boogle] but found [Google]
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:36:24 PM</td>
+				<td class='step-details'>
+						tests.Test1.testGoogle
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Gladson\Code\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png' src='C:\Gladson\Code\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png' data-src='C:\Gladson\Code\WebAutomation_Extent/src/test/resources/Reports/Images/tests.Test1.testGoogle.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Gladson\Code\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png' src='C:\Gladson\Code\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png' data-src='C:\Gladson\Code\WebAutomation_Extent./src/test/resources/Reports/Images/tests.Test1.testGoogle.png'></li>
+						</ul>
 					</div>
 				</li>
-				
-				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>testPropertiesFile</span>
-						<span class='test-time'>Aug 11, 2018 11:42:09 AM</span>
+						<span class='test-time'>May 25, 2019 06:36:23 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 11, 2018 11:42:09 AM</span>
-	<span class='label end-time'>Aug 11, 2018 11:42:09 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+103ms</span>
+	<span class='label start-time'>May 25, 2019 06:36:23 PM</span>
+	<span class='label end-time'>May 25, 2019 06:36:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+244ms</span>
 </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:42:09 AM</td>
-					<td class='step-details'>Test passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:36:24 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<!-- subview left -->
-
 	<div class='subview-right left'>
 		<div class='view-summary'>
-			<h5 class='test-name'></h5>
-
-			<div id='step-filters' class="right">
-				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
-				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
-				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
-				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
-				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
-				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
-				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
-				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
 			</div>
+			<h5 class='test-name'></h5>
 		</div>
 	</div>
 	<!-- subview right -->
-
-
-<div id='test-view-charts' class='subview-full'>
-	<div id='charts-row' class='row nm-v nm-h'>
-		<div class='col s12 m6 l6 np-h'>
-			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Tests</div>
-				<div class='chart-box'>
-					<canvas id='parent-analysis' width='100' height='80'></canvas>
-				</div>
-				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
-				</div>
-				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-				</div>
-			</div>
-		</div>
-		
-		<div class='col s12 m6 l6 np-h'>
-			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Steps</div>
-				<div class='chart-box'>
-					<canvas id='child-analysis' width='100' height='80'></canvas>
-				</div>
-				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> step(s) passed</span>
-				</div>
-				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
-				</div>
-			</div>
-		</div>
-		
-	</div>
 </div>
-</div>
-<!-- test view -->
-<!-- category view -->
-<!-- exception view -->
-<div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -271,25 +239,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>0</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 11, 2018 11:42:04 AM</div>
+					<div class='panel-lead'>May 25, 2019 06:36:17 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 11, 2018 11:42:09 AM</div>
+			 		<div class='panel-lead'>May 25, 2019 06:36:24 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 5s+256ms</div>
+					<div class='panel-lead'>0h 0m 7s+199ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -327,15 +295,15 @@
 							</tr>
 							<tr>
 								<td>JAVA Version</td>
-								<td>1.8.0_172</td>
+								<td>1.8.0_152</td>
 							</tr>
 							<tr>
 								<td>Host Name</td>
-								<td>Glady-PC</td>
+								<td>MKNB574</td>
 							</tr>
 							<tr>
 								<td>Host IP Address</td>
-								<td>192.168.31.58</td>
+								<td>172.20.121.113</td>
 							</tr>
 					</table>
 				</div>
@@ -344,12 +312,11 @@
 	</div>
 </div>
 <!-- dashboard view -->
-<!-- testrunner-logs view -->
-		</div>
+<!-- testrunner-logs view -->		</div>
 		<!-- container -->
-
 		<script>
 			var statusGroup = {
+                parentCount: 2,
 				passParent: 1,
 				failParent: 1,
 				fatalParent: 0,
@@ -357,16 +324,17 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 1,
-				
-				passChild: 1,
-				failChild: 2,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
-				
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
 				passGrandChild: 0,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
@@ -374,15 +342,17 @@
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
+				debugGrandChild: 0,
 				exceptionsGrandChild: 0,
 			};
 		</script>
-		
-			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
-		
-		
- 		<script type='text/javascript'>
- 		</script>
+		<script>
+			var timeline = {
+			        "testGoogle":0.567,"testPropertiesFile":0.244
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
 	</body>
-	
 </html>

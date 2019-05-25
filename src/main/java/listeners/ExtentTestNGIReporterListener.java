@@ -23,7 +23,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import controllers.InitMethod;
@@ -76,7 +75,7 @@ public class ExtentTestNGIReporterListener extends InitMethod implements IReport
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
 		htmlReporter.config().setDocumentTitle("Extent Report_Gladson Antony");
 		htmlReporter.config().setReportName("Extent Report_Gladson Antony");
-		htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
+		//htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
