@@ -1,12 +1,10 @@
 package utils;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -18,8 +16,7 @@ import java.io.FileNotFoundException;
  * @Author Gladson Antony
  * @Date 21-Feb-2017
  */
-public class ExcelUtils
-{
+public class ExcelUtils {
     private static XSSFSheet xlsxWorkSheet;
     private static XSSFWorkbook xlsxWorkBook;
 
@@ -32,14 +29,11 @@ public class ExcelUtils
     public static void getExcelFile(String Path, String SheetName) throws Exception {
         try {
             File file = new File(Path);
-            if (file.getAbsolutePath().endsWith(".xlsx"))
-            {
+            if (file.getAbsolutePath().endsWith(".xlsx")) {
                 FileInputStream fis = new FileInputStream(file);
                 xlsxWorkBook = new XSSFWorkbook(fis);
                 xlsxWorkSheet = xlsxWorkBook.getSheet(SheetName);
-            }
-            else if (file.getAbsolutePath().endsWith(".xls"))
-            {
+            } else if (file.getAbsolutePath().endsWith(".xls")) {
                 FileInputStream fis = new FileInputStream(file);
                 xlsWorkBook = new HSSFWorkbook(fis);
                 xlsWorkSheet = xlsWorkBook.getSheet(SheetName);
@@ -171,11 +165,11 @@ public class ExcelUtils
         Object CellData = null;
         try {
             XSSFCell xlsxCell = xlsxWorkSheet.getRow(RowNum).getCell(ColNum);
-            if (xlsxCell.getCellType() == Cell.CELL_TYPE_STRING) {
+            if (xlsxCell.getCellType() == CellType.STRING) {
                 CellData = xlsxCell.getStringCellValue();
-            } else if (xlsxCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+            } else if (xlsxCell.getCellType() == CellType.NUMERIC) {
                 CellData = xlsxCell.getNumericCellValue();
-            } else if (xlsxCell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
+            } else if (xlsxCell.getCellType() == CellType.BOOLEAN) {
                 CellData = xlsxCell.getBooleanCellValue();
             }
             return CellData;
@@ -191,11 +185,11 @@ public class ExcelUtils
         Object CellData = null;
         try {
             HSSFCell xlsCell = xlsWorkSheet.getRow(RowNum).getCell(ColNum);
-            if (xlsCell.getCellType() == Cell.CELL_TYPE_STRING) {
+            if (xlsCell.getCellType() == CellType.STRING) {
                 CellData = xlsCell.getStringCellValue();
-            } else if (xlsCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+            } else if (xlsCell.getCellType() == CellType.NUMERIC) {
                 CellData = xlsCell.getNumericCellValue();
-            } else if (xlsCell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
+            } else if (xlsCell.getCellType() == CellType.BOOLEAN) {
                 CellData = xlsCell.getBooleanCellValue();
             }
             return CellData;

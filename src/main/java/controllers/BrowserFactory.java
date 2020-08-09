@@ -18,7 +18,8 @@ import java.util.concurrent.TimeUnit;
  * @Date 08-Feb-2017
  */
 
-@Listeners({listeners.ExtentTestNGIReporterListener.class, com.automation.remarks.testng.VideoListener.class})
+@Listeners({listeners.ExtentTestNGIReporterListener.class,
+        com.automation.remarks.testng.VideoListener.class})
 public class BrowserFactory extends InitMethod {
     static WebDriver driver;
 
@@ -47,8 +48,7 @@ public class BrowserFactory extends InitMethod {
             case "ie":
             case "internet explorer":
                 System.setProperty("webdriver.ie.driver", "src/main/resources/Drivers/IEDriverServer.exe");
-                DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-                ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+                driver = new InternetExplorerDriver();
                 break;
 
             case "edge":
