@@ -1,6 +1,3 @@
-/**
- * 
- */
 package utils;
 
 import java.text.SimpleDateFormat;
@@ -12,6 +9,8 @@ import org.joda.time.DateTime;
  * @Author Gladson Antony
  * @Date 28-Jan-2017
  */
+
+
 public class DateAndTime 
 {
 	/*	To get the Current Time */
@@ -19,8 +18,7 @@ public class DateAndTime
 	{
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("kk.mm");
-		String TimeNow = dateFormat.format(date);
-		return TimeNow;
+		return dateFormat.format(date);
 	}
 
 	/*	To get the Current Date */
@@ -28,80 +26,70 @@ public class DateAndTime
 	{
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-		String DateNow = dateFormat.format(date);
-		return DateNow;
+		return dateFormat.format(date);
 	}
 
 	/*	To get the Current Month in Integer */
 	public static int getMonth_Integer() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		int month = datetime.getMonthOfYear();
-		return month;
+		return datetime.getMonthOfYear();
 	}
 	
 	/*	To get the Current Month Text as Full in String*/
 	public static String getMonth_Full() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String month_Full = datetime.monthOfYear().getAsText();
-		return month_Full;
+		return datetime.monthOfYear().getAsText();
 	}
 	
 	/*	To get the Current Month Text as Short in String*/
 	public static String getMonth_Short() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String month_Short = datetime.monthOfYear().getAsShortText();
-		return month_Short;
+		return datetime.monthOfYear().getAsShortText();
 	}
 	
 	/*	To get the Current Day of the Month */
 	public static String getDayOfTheMonth() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String dayOfTheMonth = datetime.dayOfMonth().getAsText();
-		return dayOfTheMonth;
+		return datetime.dayOfMonth().getAsText();
 	}
 	
 	/*	To get the Current Day Count in the Year */
 	public static String getDayCount() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String dayCountYear = datetime.dayOfYear().getAsText();
-		return dayCountYear;
+		return datetime.dayOfYear().getAsText();
 	}
 	
 	/*	To get the Current Minute of the Hour in String */
 	public static String getMinuteOfTheHourAsString() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String minuteOfTheHour = datetime.minuteOfHour().getAsText();
-		return minuteOfTheHour;
+		return datetime.minuteOfHour().getAsText();
 	}
 	
 	/*	To get the Current Year as Integer */
 	public static int getYear() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		int year = datetime.getYear();
-		return year;
+		return datetime.getYear();
 	}
 	
 	/*	To get the Current Hour of the Day in String */
 	public static String getHourOfTheDay() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String hour = datetime.hourOfDay().getAsShortText();
-		return hour;
+		return datetime.hourOfDay().getAsShortText();
 	}
 	
 	/*	To get the Current Week Count */
 	public static String getWeekCount() throws Exception 
 	{
 		DateTime datetime = DateTime.now();
-		String hour = datetime.weekOfWeekyear().getAsText();
-		return hour;
+		return datetime.weekOfWeekyear().getAsText();
 	}
 	
 	
