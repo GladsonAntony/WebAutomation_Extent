@@ -60,7 +60,7 @@ public class ExtentTestNGIReporterListener extends InitMethod implements IReport
         htmlReporter.config().setDocumentTitle("Extent Report_Gladson Antony");
         htmlReporter.config().setReportName("Extent Report_Gladson Antony");
         //htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
-        htmlReporter.config().setTheme(Theme.STANDARD);
+        htmlReporter.config().setTheme(Theme.DARK);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setReportUsesManualConfiguration(true);
