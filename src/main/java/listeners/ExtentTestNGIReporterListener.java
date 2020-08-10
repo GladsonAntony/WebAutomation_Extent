@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import controllers.InitMethod;
 import org.testng.*;
@@ -56,13 +57,15 @@ public class ExtentTestNGIReporterListener extends InitMethod implements IReport
     }
 
     private void init() {
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
-        htmlReporter.config().setDocumentTitle("Extent Report_Gladson Antony");
-        htmlReporter.config().setReportName("Extent Report_Gladson Antony");
-        //htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
-        htmlReporter.config().setTheme(Theme.DARK);
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
+        sparkReporter.config().setDocumentTitle("Extent Report_Gladson Antony");
+        sparkReporter.config().setReportName("Extent Report_Gladson Antony");
+        sparkReporter.config().setTimeStampFormat("HH:mm:ss");
+        sparkReporter.config().setEncoding("utf-8");
+        sparkReporter.config().setProtocol(Protocol.HTTPS);
+        sparkReporter.config().setTheme(Theme.DARK);
         extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
+        extent.attachReporter(sparkReporter);
         extent.setReportUsesManualConfiguration(true);
     }
 
