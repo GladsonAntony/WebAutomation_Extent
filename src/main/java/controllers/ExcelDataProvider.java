@@ -22,7 +22,7 @@ public class ExcelDataProvider extends InitMethod {
 
     @DataProvider(name = "excelSheetNameAsMethodName")
     public static Object[][] excelSheetNameAsMethodName(Method method) throws Exception {
-        File file = new File("src/test/resources/Test Data/Excel Files/" + method.getName() + ".xls");
+        File file = new File("src/test/resources/Test Data/Excel Files/" + method.getName() + ".xlsx");
         System.out.println("Opening Excel File:" + file.getAbsolutePath());
         return ExcelUtils.getTableArray(file.getAbsolutePath());
     }

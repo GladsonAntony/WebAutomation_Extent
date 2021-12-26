@@ -1,10 +1,12 @@
 package utils;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -14,14 +16,20 @@ import java.io.FileNotFoundException;
 
 /**
  * @Author Gladson Antony
- * @Date 21-Feb-2017
+ * @Date 2021-08-09T00:27:03.862Z
  */
 public class ExcelUtils {
     private static XSSFSheet xlsxWorkSheet;
     private static XSSFWorkbook xlsxWorkBook;
+    private static XSSFCell xlsxCell;
+    @SuppressWarnings("unused")
+    private static XSSFRow xlsxRow;
 
     private static HSSFSheet xlsWorkSheet;
     private static HSSFWorkbook xlsWorkBook;
+    private static HSSFCell xlsCell;
+    @SuppressWarnings("unused")
+    private static HSSFRow xlsRow;
 
     /**
      * To get the Excel-XLSX File with Path and SheetName
@@ -164,13 +172,19 @@ public class ExcelUtils {
     public static Object getCellData_XLSX(int RowNum, int ColNum) throws Exception {
         Object CellData = null;
         try {
-            XSSFCell xlsxCell = xlsxWorkSheet.getRow(RowNum).getCell(ColNum);
+            xlsxCell = xlsxWorkSheet.getRow(RowNum).getCell(ColNum);
             if (xlsxCell.getCellType() == CellType.STRING) {
-                CellData = xlsxCell.getStringCellValue();
+                String stringCellData = xlsxCell.getStringCellValue();
+                CellData = stringCellData;
             } else if (xlsxCell.getCellType() == CellType.NUMERIC) {
-                CellData = xlsxCell.getNumericCellValue();
+                double numericCellData = xlsxCell.getNumericCellValue();
+                CellData = numericCellData;
             } else if (xlsxCell.getCellType() == CellType.BOOLEAN) {
-                CellData = xlsxCell.getBooleanCellValue();
+                boolean booleanCellData = xlsxCell.getBooleanCellValue();
+                CellData = booleanCellData;
+            } else if (xlsxCell.getCellType() == CellType.FORMULA) {
+                String formulaCellData = xlsxCell.getCellFormula();
+                CellData = formulaCellData;
             }
             return CellData;
         } catch (Exception e) {
@@ -184,13 +198,19 @@ public class ExcelUtils {
     public static Object getCellData_XLS(int RowNum, int ColNum) throws Exception {
         Object CellData = null;
         try {
-            HSSFCell xlsCell = xlsWorkSheet.getRow(RowNum).getCell(ColNum);
+            xlsCell = xlsWorkSheet.getRow(RowNum).getCell(ColNum);
             if (xlsCell.getCellType() == CellType.STRING) {
-                CellData = xlsCell.getStringCellValue();
+                String stringCellData = xlsCell.getStringCellValue();
+                CellData = stringCellData;
             } else if (xlsCell.getCellType() == CellType.NUMERIC) {
-                CellData = xlsCell.getNumericCellValue();
+                double numericCellData = xlsCell.getNumericCellValue();
+                CellData = numericCellData;
             } else if (xlsCell.getCellType() == CellType.BOOLEAN) {
-                CellData = xlsCell.getBooleanCellValue();
+                boolean booleanCellData = xlsCell.getBooleanCellValue();
+                CellData = booleanCellData;
+            } else if (xlsxCell.getCellType() == CellType.FORMULA) {
+                String formulaCellData = xlsxCell.getCellFormula();
+                CellData = formulaCellData;
             }
             return CellData;
         } catch (Exception e) {
@@ -202,27 +222,31 @@ public class ExcelUtils {
      * To get Excel-XLSX Row Count
      */
     public static int xlsxRowCount() {
-        return xlsxWorkSheet.getLastRowNum() + 1;
+        int rowNum = xlsxWorkSheet.getLastRowNum() + 1;
+        return rowNum;
     }
 
     /**
      * To get Excel-XLS Row Count
      */
     public static int xlsRowCount() {
-        return xlsWorkSheet.getLastRowNum() + 1;
+        int rowNum = xlsWorkSheet.getLastRowNum() + 1;
+        return rowNum;
     }
 
     /**
      * To get Excel-XLSX Column Count
      */
     public static int xlsxColumnCount() {
-        return xlsxWorkSheet.getRow(0).getLastCellNum();
+        int rowNum = xlsxWorkSheet.getRow(0).getLastCellNum();
+        return rowNum;
     }
 
     /**
      * To get Excel-XLS Column Count
      */
     public static int xlsColumnCount() {
-        return xlsWorkSheet.getRow(0).getLastCellNum();
+        int rowNum = xlsWorkSheet.getRow(0).getLastCellNum();
+        return rowNum;
     }
 }

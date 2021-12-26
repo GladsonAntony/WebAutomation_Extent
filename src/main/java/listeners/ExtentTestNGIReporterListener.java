@@ -39,7 +39,7 @@ public class ExtentTestNGIReporterListener extends InitMethod implements IReport
             }
         }
         for (String s : Reporter.getOutput()) {
-            extent.setTestRunnerOutput(s);
+            extent.addTestRunnerOutput(s);
         }
         extent.setSystemInfo("Author", "Gladson Antony");
         extent.setSystemInfo("Browser", Browser);

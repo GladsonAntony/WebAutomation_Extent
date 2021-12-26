@@ -196,7 +196,7 @@ public class BaseMethod extends WebDriverFactory {
 
 
     /* To Perform a WebAction of Mouse Over */
-    public void mousehover(WebElement element) {
+    public void mouseHover(WebElement element) {
         ac = new Actions(getWebDriver());
         ac.moveToElement(element).build().perform();
     }
@@ -230,7 +230,7 @@ public class BaseMethod extends WebDriverFactory {
 
 
     /* To click a certain Web Element using DOM/ JavaScript Executor */
-    public void JSclick(WebElement element) {
+    public void javaScriptExecutorClick(WebElement element) {
         ((JavascriptExecutor) getWebDriver()).executeScript("return arguments[0].click();", element);
     }
 
@@ -248,14 +248,14 @@ public class BaseMethod extends WebDriverFactory {
 
 
     /* To Drag and Drop from Source Locator to Destination Locator */
-    public void dragandDrop(WebElement Source, WebElement Destination) {
+    public void dragAndDrop(WebElement Source, WebElement Destination) {
         ac = new Actions(getWebDriver());
         ac.dragAndDrop(Source, Destination);
     }
 
 
     /*To Drag from the given WebElement Location and Drop at the given WebElement location */
-    public void dragandDropTo(WebElement Source, int XOffset, int YOffset) throws Exception {
+    public void dragAndDropTo(WebElement Source, int XOffset, int YOffset) throws Exception {
         ac = new Actions(getWebDriver());
         ac.dragAndDropBy(Source, XOffset, YOffset);
     }

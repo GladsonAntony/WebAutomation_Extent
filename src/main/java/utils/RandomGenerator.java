@@ -1,5 +1,6 @@
 package utils;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.Random;
@@ -12,6 +13,7 @@ import java.util.Random;
 public class RandomGenerator {
 
     public static Random rand = new Random();
+    public static Faker faker = new Faker();
 
     /*	To Generate Random Numbers of the Entered Length.*/
     public static String GenerateRandomNumber(int length) {
@@ -79,14 +81,14 @@ public class RandomGenerator {
 
     /*	To Generate Random E-Mail IDs(Auto Generate Domain Names.*/
     public static String GenerateRandomEMAILIDs() {
-        String EmailID = RandomStringUtils.randomAlphabetic(15).toString();
-        String Domain = RandomStringUtils.randomAlphabetic(7).toLowerCase().toString();
+        String EmailID = faker.name().fullName().toString().replaceAll(" ","");
+        String Domain = faker.company().name().toString().replaceAll(" ","");
         return EmailID + "@" + Domain + ".com";
     }
 
     /*	To Generate Random E-Mail IDs.*/
     public static String GenerateRandomEMAILIDs(String DomainName) {
-        String EmailID = RandomStringUtils.randomAlphabetic(15).toString();
+        String EmailID = faker.name().fullName().replaceAll(" ","");
         return EmailID + "@" + DomainName;
     }
 }
