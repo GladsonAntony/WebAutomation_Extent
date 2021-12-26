@@ -47,9 +47,8 @@ $ mvn clean test -DBrowserType=Chrome			#Chrome
 $ mvn clean test -DBrowserType=Chrome_Headless		#Chrome Headless
 $ mvn clean test -DBrowserType=Firefox			#Mozilla Firefox
 $ mvn clean test -DBrowserType=IE			#Internet Explorer
-$ mvn clean test -DBrowserType=Opera			#Opera Blink
 $ mvn clean test -DBrowserType=Edge			#Microsoft Edge
-$ mvn clean test -DBrowserType=Unit			#HTML Unit Headerless Browser
+$ mvn clean test -DBrowserType=Edge_Headless			#Microsoft Edge Headless
 ```
 ---
 ### Report Details
